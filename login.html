@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login/login.css">
+</head>
+
+<body>
+
+    <video autoplay muted loop class="bg_video">
+        <source src="img/video_3.mp4" type="video/mp4">
+    </video>
+
+    <main class="container">
+        <header>
+            <h1>School Management System</h1>
+        </header>
+
+        <form action="pages/login.php" method="POST">
+            <label for="username">Email:</label>
+            <input type="email" id="email" name="email" required aria-label="Email Address">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required aria-label="Password">
+
+            <button type="submit">Login</button>
+        </form>
+        <div id="message"></div>
+    </main>
+
+</body>
+
+</html>

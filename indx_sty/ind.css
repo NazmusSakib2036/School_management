@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #004080;
+    color: white;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar i {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.navbar .fa-bars,
+.navbar .fa-x {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+.sidebar {
+    width: 250px;
+    background-color: black;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    transition: all 0.3s ease;
+    overflow-y: auto;
+    margin-top: 50px;
+}
+
+.sidebar .account {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ac_name {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.designation {
+    color: white;
+    font-size: 14px;
+}
+
+.sidebar .profile_user img {
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid red;
+}
+
+
+
+.slider_section {
+    margin-bottom: 5rem;
+}
+
+.slider_section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.slider_section ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    padding: 10px 20px;
+
+    &:hover {
+        color: black;
+    }
+}
+
+.slider_section ul li {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.slider_section ul li:hover {
+    background-color: #ddd;
+    border-left: 2px solid red;
+    border-right: 2px solid red;
+}
+
+
+
+
+
+
+
+
+
+
+.main_content {
+    margin-left: 250px;
+    transition: all 0.3s ease;
+    margin-top: 50px;
+}
+
+.header_ds {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00ff00;
+    padding: 5px 15px;
+    color: black;
+}
+
+.header_ds1 p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header_ds .session {
+    font-size: 13px;
+    text-align: center;
+}
+
+.header_ds2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00ff00;
+    padding: 5px 15px;
+    color: black;
+    gap: 10px;
+}
+
+.header_ds2 i {
+    color: black;
+}
+
+.header_ds2 p {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 30px;
+}
+
+.all_box {
+    width: calc(33.333% - 30px);
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.all_box:hover {
+    transform: translateY(-5px);
+}
+
+.card {
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    color: #333;
+    width: 100%;
+    height: 100%;
+}
+
+.card-image {
+    width: 100%;
+    height: 50px;
+    object-fit: cover;
+}
+
+.all_box img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-title {
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .main_content {
+        margin-left: 200px;
+    }
+
+    .all_box {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sidebar {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        z-index: 1000;
+        transform: translateX(-100%);
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .main_content {
+        margin-left: 0;
+    }
+
+    .all_box {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .all_box {
+        width: 100%;
+    }
+
+    .header_ds1 p {
+        font-size: 16px;
+    }
+}
